@@ -67,3 +67,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #00add2 #2b2b31; /* Color del thumb y track */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #2b2b31; /* Color del track */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #00add2; /* Color del thumb */
+    border-radius: 4px;
+    border: 2px solid #2b2b31; /* Espacio alrededor del thumb */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #008fbf; /* Color del thumb cuando se pasa el mouse */
+  }
+}

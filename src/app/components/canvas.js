@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
+import { Form } from "./form";
 
 const Canvas = () => {
   const canvasRef = useRef(null);
@@ -45,7 +46,7 @@ const Canvas = () => {
         height: "100vh",
         overflow: "hidden",
         cursor: isDragging ? "grabbing" : "grab",
-        background: "#f0f0f0",
+        background: "#121212",
         position: "relative",
       }}
     >
@@ -53,13 +54,15 @@ const Canvas = () => {
         style={{
           transform: `translate(${translate.x}px, ${translate.y}px) scale(${scale})`,
           transformOrigin: "0 0",
-          width: "200%",
-          height: "200%",
-          background: "white",
+          width: "400%",
+          height: "400%",
+          background: "#121212",
+          color: "white",
         }}
       >
         {/* Aquí puedes agregar los elementos que quieras dentro del canvas */}
         <h1 style={{ padding: "20px" }}>Este es tu canvas</h1>
+        <Form />
       </div>
     </div>
   );
